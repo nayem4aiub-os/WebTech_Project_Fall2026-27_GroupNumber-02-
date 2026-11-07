@@ -8,7 +8,6 @@ function collect_data()
     let validdept = true;
     let validmessage = true;
 
-    // sudhu jei page e field ache shei gula check hobe
     if(document.getElementById("FullName") != null)
     {
         validname = collect_name();
@@ -56,7 +55,6 @@ function collect_data()
 
     let allvalid = validname && validemail && validpassword && validdept && validmessage;
 
-    // contact page: message page e dekhabe, page reload korbe na
     if(document.getElementById("contactResult") != null && allvalid)
     {
         let cname = document.getElementById("FullName").value.trim();
@@ -65,7 +63,6 @@ function collect_data()
         return false;
     }
 
-    // progress page: BMI dekhabe, page reload korbe na
     if(document.getElementById("bmiResult") != null)
     {
         let bweight = Number(document.getElementById("weightInput").value);
@@ -92,7 +89,6 @@ function collect_data()
         return false;
     }
 
-    // tick kora row remove korbe, page reload korbe na
     if(document.getElementById("removeTable") != null && allvalid)
     {
         let checked = document.querySelectorAll('input[name="doctortype"]:checked');
@@ -103,7 +99,6 @@ function collect_data()
         return false;
     }
 
-    // admin login page: sudhu admin email ar password hole admin page e jabe
     if(document.getElementById("AdminError") != null && allvalid)
     {
         let aemail = document.getElementById("UserEmail").value.trim().toLowerCase();
