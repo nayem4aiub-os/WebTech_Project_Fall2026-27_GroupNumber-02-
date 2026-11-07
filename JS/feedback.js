@@ -1,5 +1,3 @@
-// FAQ toggle and feedback validation (Member 4)
-
 function toggle_answer(id)
 {
     let answer = document.getElementById(id);
@@ -27,7 +25,6 @@ function submit_feedback()
 
     let valid = true;
 
-    // name
     if(name.length < 3)
     {
         nameError.textContent = "Name Must Be atleast 3 Char";
@@ -38,7 +35,6 @@ function submit_feedback()
         nameError.textContent = "";
     }
 
-    // email
     let expression = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(!expression.test(email))
     {
@@ -50,7 +46,6 @@ function submit_feedback()
         emailError.textContent = "";
     }
 
-    // rating
     if(ratingBox === null)
     {
         ratingError.textContent = "Select a rating";
@@ -61,7 +56,6 @@ function submit_feedback()
         ratingError.textContent = "";
     }
 
-    // comment
     if(message.length < 10)
     {
         messageError.textContent = "Comment Must Be atleast 10 Char";
@@ -78,6 +72,5 @@ function submit_feedback()
             "Thank you, " + name + ". Rating: " + ratingBox.value + "/5. Comment: " + message;
     }
 
-    // stay on the same page
     return false;
 }
