@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title> Admin Dashboard | SmartFit </title>
+        <link rel="stylesheet" href="../Design/style.css">
+        <link rel="stylesheet" href="../Design/member4.css">
+    </head>
+    <body>
+        <img src="../Images/logo.png" id="logo" alt="SmartFit logo">
+        <h1> Admin Dashboard </h1>
+
+        <div class="topnav">
+            <a href="../index.html"> Home </a>
+            <a href="progress.html"> Progress </a>
+            <a href="admin.html"> Admin </a>
+            <a href="contact.html"> Contact </a>
+            <a href="admin-login.html"> Logout </a>
+            <a href="feedback.html"> Feedback </a>
+        </div>
+
+        <p> Demo interface for the administrator module. </p>
+
+        <fieldset>
+            <legend> Overview </legend>
+            <table>
+                <tr>
+                    <td> <b> Registered users </b> </td>
+                    <td> 3 </td>
+                </tr>
+                <tr>
+                    <td> <b> Workout records </b> </td>
+                    <td> 3 </td>
+                </tr>
+                <tr>
+                    <td> <b> Meal records </b> </td>
+                    <td> 3 </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <form action="admin.html" onsubmit="return collect_data()">
+            <fieldset>
+                <legend> Manage User Accounts </legend>
+                <table border="1" id="removeTable">
+                    <tr>
+                        <td> Select </td>
+                        <td> <b> Name </b> </td>
+                        <td> <b> Email </b> </td>
+                        <td> <b> Role </b> </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" id="User1" name="doctortype" value="User1"> </td>
+                        <td> Rahim Uddin </td>
+                        <td> rahim@example.com </td>
+                        <td> User </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" id="User2" name="doctortype" value="User2"> </td>
+                        <td> Karim Ahmed </td>
+                        <td> karim@example.com </td>
+                        <td> Fitness Trainer </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" id="User3" name="doctortype" value="User3"> </td>
+                        <td> Nusrat Jahan </td>
+                        <td> nusrat@example.com </td>
+                        <td> Nutritionist </td>
+                    </tr>
+                </table>
+                <span id="DeptError" style="color:red"></span>
+            </fieldset>
+            <br>
+            <input type="submit" id="submit" value="Remove Selected">
+            <input type="reset" id="reset">
+        </form>
+        <!--
+        <fieldset>
+            <legend> Admin Responsibilities </legend>
+            <ul>
+                <li> Manage user accounts and roles. </li>
+                <li> Monitor workout and meal records. </li>
+                <li> Review progress reports. </li>
+                <li> Keep user data secure and private. </li>
+            </ul>
+            <p> Important: this page is a frontend demo only. Real admin access must be checked securely by the backend. </p>
+        </fieldset>
+    -->
+        <script src="../JS/member4.js"></script>
+    </body>
+</html>

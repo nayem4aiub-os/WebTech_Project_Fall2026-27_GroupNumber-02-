@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title> Admin Login | SmartFit </title>
+        <link rel="stylesheet" href="../Design/style.css">
+        <link rel="stylesheet" href="../Design/member4.css">
+    </head>
+    <body>
+        <img src="../Images/logo.png" id="logo" alt="SmartFit logo">
+        <h1> Admin Login </h1>
+
+        <div class="topnav">
+            <a href="../index.html"> Home </a>
+            <a href="admin-login.html"> Admin Login </a>
+        </div>
+
+        <form action="admin.html" onsubmit="return collect_data()">
+            <fieldset>
+                <legend> Administrator Access </legend>
+                <table>
+                    <tr>
+                        <td> <label for="UserEmail"> Admin Email: </label> </td>
+                        <td>
+                            <input type="email" id="UserEmail" name="UserEmail" placeholder="Enter the Admin Email">
+                            <span id="EmailError" style="color:red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="Password"> Password: </label> </td>
+                        <td>
+                            <input type="password" id="Password" name="Password" placeholder="Enter the Password">
+                            <span id="PasswordError" style="color:red"></span>
+                        </td>
+                    </tr>
+                </table>
+                <span id="AdminError" style="color:red"></span>
+            </fieldset>
+            <br>
+            <input type="submit" id="submit" value="Admin Login">
+            <input type="reset" id="reset">
+        </form>
+
+
+        <script src="../JS/member4.js"></script>
+    </body>
+</html>
