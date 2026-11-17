@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title> Sign Up | SmartFit </title>
+        <link rel="stylesheet" href="../Design/style.css">
+        <link rel="stylesheet" href="../Design/member1.css">
+    </head>
+    <body>
+        <img src="../Images/logo.png" id="logo" alt="SmartFit logo">
+        <h1> Create Account </h1>
+
+        <div class="topnav">
+            <a href="../index.html"> Home </a>
+            <a href="login.html"> Login </a>
+            <a href="signup.html"> Sign Up </a>
+            <a href="profile.html"> Profile </a>
+            <a href="forgot-password.html"> Forgot Password </a>
+        </div>
+
+        <form action="login.html" onsubmit="return collect_data()">
+            <fieldset>
+                <legend> Personal Information </legend>
+                <table>
+                    <tr>
+                        <td> <label for="FullName"> Full Name: </label> </td>
+                        <td>
+                            <input type="text" id="FullName" name="FullName" placeholder="Enter Your Name">
+                            <span id="ErrorText" style="color:red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="UserEmail"> Email: </label> </td>
+                        <td>
+                            <input type="email" id="UserEmail" name="UserEmail" placeholder="Enter the Email">
+                            <span id="EmailError" style="color:red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="GenderM"> Gender: </label> </td>
+                        <td>
+                            <input type="radio" id="GenderM" name="gender" value="Male"> Male
+                            <input type="radio" id="GenderF" name="gender" value="Female"> Female
+                            <span id="GenderError" style="color:red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="Role"> Account Type: </label> </td>
+                        <td>
+                            <select id="Role" name="Role" required>
+                                <option value="" disabled selected> ------------- </option>
+                                <option value="User"> User </option>
+                                <option value="Fitness Trainer"> Fitness Trainer </option>
+                                <option value="Nutritionist"> Nutritionist </option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend> User Profile </legend>
+                <table>
+                    <tr>
+                        <td> <label for="Password"> Password: </label> </td>
+                        <td>
+                            <input type="password" id="Password" name="Password" placeholder="At least 6 characters">
+                            <span id="PasswordError" style="color:red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="ConfirmPassword"> Confirm Password: </label> </td>
+                        <td>
+                            <input type="password" id="ConfirmPassword" name="ConfirmPassword" placeholder="Enter the Password again">
+                            <span id="ConfirmError" style="color:red"></span>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <input type="submit" id="submit" value="Create Account">
+            <input type="reset" id="reset">
+        </form>
+
+        <p> Already registered? <a href="login.html"> Login </a> </p>
+
+        <script src="../JS/member1.js"></script>
+    </body>
+</html>

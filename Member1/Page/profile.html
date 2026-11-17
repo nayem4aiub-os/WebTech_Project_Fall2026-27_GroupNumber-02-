@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title> Profile | SmartFit </title>
+        <link rel="stylesheet" href="../Design/style.css">
+        <link rel="stylesheet" href="../Design/member1.css">
+    </head>
+    <body>
+        <img src="../Images/logo.png" id="logo" alt="SmartFit logo">
+        <h1> My Profile </h1>
+
+        <div class="topnav">
+            <a href="../index.html"> Home </a>
+            <a href="login.html"> Login </a>
+            <a href="signup.html"> Sign Up </a>
+            <a href="profile.html"> Profile </a>
+            <a href="forgot-password.html"> Forgot Password </a>
+        </div>
+
+        <form action="../index.html" onsubmit="return collect_data()">
+            <fieldset>
+                <legend> Personal Information </legend>
+                <table>
+                    <tr>
+                        <td> <label for="FullName"> Full Name: </label> </td>
+                        <td>
+                            <input type="text" id="FullName" name="FullName" placeholder="Enter Your Name">
+                            <span id="ErrorText" style="color:red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="UserEmail"> Email: </label> </td>
+                        <td>
+                            <input type="email" id="UserEmail" name="UserEmail" placeholder="Enter the Email">
+                            <span id="EmailError" style="color:red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="Age"> Age: </label> </td>
+                        <td> <input type="number" id="Age" name="Age" min="1" max="120" placeholder="e.g. 22" required> </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="GenderM"> Gender: </label> </td>
+                        <td>
+                            <input type="radio" id="GenderM" name="gender" value="Male"> Male
+                            <input type="radio" id="GenderF" name="gender" value="Female"> Female
+                            <span id="GenderError" style="color:red"></span>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend> Health Information </legend>
+                <table>
+                    <tr>
+                        <td> <label for="Height"> Height (cm): </label> </td>
+                        <td> <input type="number" id="Height" name="Height" min="1" placeholder="e.g. 170" required> </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="Weight"> Weight (kg): </label> </td>
+                        <td> <input type="number" id="Weight" name="Weight" min="1" step="0.1" placeholder="e.g. 68" required> </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="Healthy"> Main Goal: </label> </td>
+                        <td>
+                            <input type="checkbox" id="Healthy" name="doctortype" value="Stay healthy"> Stay healthy
+                            <input type="checkbox" id="Lose" name="doctortype" value="Lose weight"> Lose weight <br>
+                            <input type="checkbox" id="Muscle" name="doctortype" value="Build muscle"> Build muscle
+                            <input type="checkbox" id="Endurance" name="doctortype" value="Improve endurance"> Improve endurance
+                            <span id="DeptError" style="color:red"></span>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <input type="submit" id="submit" value="Save Profile">
+            <input type="reset" id="reset">
+        </form>
+
+        <script src="../JS/member1.js"></script>
+    </body>
+</html>
