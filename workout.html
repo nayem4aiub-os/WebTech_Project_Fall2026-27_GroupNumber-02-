@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title> Workout | SmartFit </title>
+        <link rel="stylesheet" href="../Design/style.css">
+        <link rel="stylesheet" href="../Design/member2.css">
+    </head>
+    <body>
+        <img src="../Images/logo.png" id="logo" alt="SmartFit logo">
+        <h1> Workout Library </h1>
+
+        <div class="topnav">
+            <a href="../index.html"> Home </a>
+            <a href="workout.html"> Workout </a>
+            <a href="goal.html"> Fitness Goals </a>
+            <a href="schedule.html"> Schedule </a>
+            <a href="workout-history.html"> Workout History </a>
+        </div>
+
+        <form action="goal.html" onsubmit="return collect_data()">
+            <fieldset>
+                <legend> Choose Completed Workouts </legend>
+                <table>
+                    <tr>
+                        <td> <input type="checkbox" id="Walking" name="doctortype" value="Brisk Walking"> </td>
+                        <td> <label for="Walking"> <b> Brisk Walking </b> </label> </td>
+                        <td> 20-30 minutes </td>
+                        <td> Cardio (Beginner) </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" id="Strength" name="doctortype" value="Bodyweight Strength"> </td>
+                        <td> <label for="Strength"> <b> Bodyweight Strength </b> </label> </td>
+                        <td> 15-20 minutes </td>
+                        <td> Strength (Beginner) </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" id="Stretching" name="doctortype" value="Stretching"> </td>
+                        <td> <label for="Stretching"> <b> Stretching </b> </label> </td>
+                        <td> 10-15 minutes </td>
+                        <td> Flexibility (All levels) </td>
+                    </tr>
+                </table>
+                <span id="DeptError" style="color:red"></span>
+            </fieldset>
+            <br>
+            <input type="submit" id="submit" value="Mark Complete">
+            <input type="reset" id="reset">
+        </form>
+
+        <script src="../JS/member2.js"></script>
+    </body>
+</html>

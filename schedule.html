@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title> Workout Schedule | SmartFit </title>
+        <link rel="stylesheet" href="../Design/style.css">
+        <link rel="stylesheet" href="../Design/member2.css">
+    </head>
+    <body>
+        <img src="../Images/logo.png" id="logo" alt="SmartFit logo">
+        <h1> Workout Schedule </h1>
+
+        <div class="topnav">
+            <a href="../index.html"> Home </a>
+            <a href="workout.html"> Workout </a>
+            <a href="goal.html"> Fitness Goals </a>
+            <a href="schedule.html"> Schedule </a>
+            <a href="workout-history.html"> Workout History </a>
+        </div>
+
+        <form action="../index.html" onsubmit="return collect_data()">
+            <fieldset>
+                <legend> Plan Your Week </legend>
+                <table>
+                    <tr>
+                        <td> <label for="Monday"> Day: </label> </td>
+                        <td>
+                            <input type="checkbox" id="Monday" name="doctortype" value="Monday"> Monday
+                            <input type="checkbox" id="Tuesday" name="doctortype" value="Tuesday"> Tuesday
+                            <input type="checkbox" id="Wednesday" name="doctortype" value="Wednesday"> Wednesday <br>
+                            <input type="checkbox" id="Thursday" name="doctortype" value="Thursday"> Thursday
+                            <input type="checkbox" id="Friday" name="doctortype" value="Friday"> Friday
+                            <input type="checkbox" id="Saturday" name="doctortype" value="Saturday"> Saturday
+                            <input type="checkbox" id="Sunday" name="doctortype" value="Sunday"> Sunday
+                            <span id="DeptError" style="color:red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="ScheduleWorkout"> Workout: </label> </td>
+                        <td>
+                            <select id="ScheduleWorkout" name="ScheduleWorkout" required>
+                                <option value="" disabled selected> ------------- </option>
+                                <option value="Brisk Walking"> Brisk Walking </option>
+                                <option value="Bodyweight Strength"> Bodyweight Strength </option>
+                                <option value="Stretching"> Stretching </option>
+                                <option value="Cycling"> Cycling </option>
+                                <option value="Rest Day"> Rest Day </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="ScheduleTime"> Time: </label> </td>
+                        <td> <input type="time" id="ScheduleTime" name="ScheduleTime" required> </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <input type="submit" id="submit" value="Add to Schedule">
+            <input type="reset" id="reset">
+        </form>
+
+        <script src="../JS/member2.js"></script>
+    </body>
+</html>

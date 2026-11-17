@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title> Workout History | SmartFit </title>
+        <link rel="stylesheet" href="../Design/style.css">
+        <link rel="stylesheet" href="../Design/member2.css">
+    </head>
+    <body>
+        <img src="../Images/logo.png" id="logo" alt="SmartFit logo">
+        <h1> Workout History </h1>
+
+        <div class="topnav">
+            <a href="../index.html"> Home </a>
+            <a href="workout.html"> Workout </a>
+            <a href="goal.html"> Fitness Goals </a>
+            <a href="schedule.html"> Schedule </a>
+            <a href="workout-history.html"> Workout History </a>
+        </div>
+
+        <form action="workout-history.html" onsubmit="return collect_data()">
+            <fieldset>
+                <legend> Completed Workouts </legend>
+                <table border="1" id="removeTable">
+                    <tr>
+                        <td> Select </td>
+                        <td> <b> Workout </b> </td>
+                        <td> <b> Duration </b> </td>
+                        <td> <b> Date </b> </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" id="Work1" name="doctortype" value="Work1"> </td>
+                        <td> Brisk Walking </td>
+                        <td> 30 minutes </td>
+                        <td> 30/10/2026 </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" id="Work2" name="doctortype" value="Work2"> </td>
+                        <td> Bodyweight Strength </td>
+                        <td> 20 minutes </td>
+                        <td> 29/10/2026 </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" id="Work3" name="doctortype" value="Work3"> </td>
+                        <td> Stretching </td>
+                        <td> 15 minutes </td>
+                        <td> 28/10/2026 </td>
+                    </tr>
+                </table>
+                <span id="DeptError" style="color:red"></span>
+            </fieldset>
+            <br>
+            <input type="submit" id="submit" value="Remove Selected">
+            <input type="reset" id="reset">
+        </form>
+
+        <script src="../JS/member2.js"></script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title> Fitness Goals | SmartFit </title>
+        <link rel="stylesheet" href="../Design/style.css">
+        <link rel="stylesheet" href="../Design/member2.css">
+    </head>
+    <body>
+        <img src="../Images/logo.png" id="logo" alt="SmartFit logo">
+        <h1> Fitness Goals </h1>
+
+        <div class="topnav">
+            <a href="../index.html"> Home </a>
+            <a href="workout.html"> Workout </a>
+            <a href="goal.html"> Fitness Goals </a>
+            <a href="schedule.html"> Schedule </a>
+            <a href="workout-history.html"> Workout History </a>
+        </div>
+
+        <form action="schedule.html" onsubmit="return collect_data()">
+            <fieldset>
+                <legend> Set Your Target </legend>
+                <table>
+                    <tr>
+                        <td> <label for="Healthy"> Your Goal: </label> </td>
+                        <td>
+                            <input type="checkbox" id="Healthy" name="doctortype" value="Stay healthy"> Stay healthy
+                            <input type="checkbox" id="Lose" name="doctortype" value="Lose weight"> Lose weight <br>
+                            <input type="checkbox" id="Muscle" name="doctortype" value="Build muscle"> Build muscle
+                            <input type="checkbox" id="Endurance" name="doctortype" value="Improve endurance"> Improve endurance
+                            <span id="DeptError" style="color:red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="WeeklyTarget"> Workouts per week: </label> </td>
+                        <td> <input type="number" id="WeeklyTarget" name="WeeklyTarget" min="1" max="14" value="4" required> </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <input type="submit" id="submit" value="Save Goal">
+            <input type="reset" id="reset">
+        </form>
+
+        <script src="../JS/member2.js"></script>
+    </body>
+</html>
